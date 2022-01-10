@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Console test",
+      "setup": "",
+      "run": "dotnet run",
+      "input": "",
+      "output": "Hello, World!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 100
+    }
+  ]
+}
