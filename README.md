@@ -113,3 +113,7 @@ Copyright (C) 2022 V0ldek
 
   --version              Display version information.
 ```
+
+## License
+
+Everything here is licensed under the MIT license. The example code (`ClassroomTemplate` and `ClassroomTemplate.Tests` projects) is completely replaceable so you can license your assignment under anything you would like (the "substantial parts of this software" doesn't really apply to "Hello World"). However, if you reuse the pipeline and `GenerateAutograding`, keep it under MIT.
