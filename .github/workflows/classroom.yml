@@ -22,5 +22,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Generate autograding.json
+      run: dotnet run --project ./.github/classroom/GenerateAutograding -- -e ClassroomTemplate -p 100 -o ./autograding.json
     - name: Autograding
       uses: education/autograding@v1
