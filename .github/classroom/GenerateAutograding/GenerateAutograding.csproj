@@ -5,6 +5,9 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Authors>V0ldek</Authors>
+    <Description>CLI utility for generating GitHub Classroom autograding configuration for .NET projects.</Description>
+    <RepositoryUrl>https://github.com/V0ldek/ClassroomTemplate</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

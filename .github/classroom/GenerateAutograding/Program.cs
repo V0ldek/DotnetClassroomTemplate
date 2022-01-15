@@ -1,25 +1,11 @@
-﻿using CommandLine;
-using System.Text.Json;
+﻿using System.Text.Json;
+using CommandLine;
+using GenerateAutograding;
 
 return Parser.Default.ParseArguments<Options>(args).MapResult(
     options =>
     {
-        var project = options.EntryProjectName;
-        var tests = new Test[]
-        {
-            new InputOutputTest(project, "", "Hello, World!")
-            {
-                Points = 50
-            },
-            new DotnetTestGroup("Adder")
-            {
-                Points = 25
-            },
-            new DotnetTestGroup("HelloWorld")
-            {
-                Points = 25
-            },
-        };
+        var tests = new TestSet(options.EntryProjectName).Tests;
 
         if (options.PointsTotal is not null)
         {
@@ -44,35 +30,6 @@ return Parser.Default.ParseArguments<Options>(args).MapResult(
         return 0;
     },
     _ => 1);
-
-abstract record class Test(int Timeout, int Points)
-{
-    protected const string HomeVariableFix = "DOTNET_CLI_HOME=/home/runner";
-
-    public abstract TestJson ToJsonModel();
-}
-
-record class DotnetTestGroup(string TestGroup) : Test(1, 1)
-{
-    public string Name { get; init; } = $"Unit Tests ({TestGroup})";
-
-    private string Command => $"{HomeVariableFix} dotnet test --filter TestGroup={TestGroup}";
-
-    public override TestJson ToJsonModel() => new TestJson(Name, "", Command, "", "", "included", Timeout, Points);
-}
-
-record class InputOutputTest(string Project, string Input, string Output) : Test(1, 1)
-{
-    public string Name { get; init; } = $"Console Test ({Project})";
-
-    private string Command => $"{HomeVariableFix} dotnet run --project {Project}";
-
-    public override TestJson ToJsonModel() => new TestJson(Name, "", Command, Input, Output, "exact", Timeout, Points);
-}
-
-record class TestJson(string Name, string Setup, string Run, string Input, string Output, string Comparison, int Timeout, int Points)
-{
-}
 
 class Options
 {
