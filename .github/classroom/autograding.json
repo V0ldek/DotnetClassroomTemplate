@@ -10,7 +10,6 @@
       "timeout": 1,
       "points": 50
     },
-    "tests": [
     {
       "name": "Dotnet test",
       "setup": "",
@@ -21,6 +20,5 @@
       "timeout": 1,
       "points": 50
     }
-  ]
   ]
 }
