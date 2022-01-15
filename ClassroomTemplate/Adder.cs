@@ -2,5 +2,5 @@
 
 public record class Adder(int First, int Second)
 {
-    public int Sum => throw new NotImplementedException();
+    public int Sum => 0;
 }
