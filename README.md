@@ -6,7 +6,7 @@ Template for autograding enabled .NET projects in GitHub Classroom.
 
 Use this template as a baseline for defining your Classroom assignments. DO NOT use the Classroom GUI to add autograding tests &ndash; edit `.github/classroom/GenerateAutograding/Tests.cs` instead.
 
-See PRs [https://github.com/V0ldek/ClassroomTemplate/pull/3](#3 Correct implementation) and [https://github.com/V0ldek/ClassroomTemplate/pull/4](#4 Incorrect implementation) to see the autograding in action.
+See PRs [#3 Correct implementation](https://github.com/V0ldek/ClassroomTemplate/pull/3) and [#4 Incorrect implementation](https://github.com/V0ldek/ClassroomTemplate/pull/4) to see the autograding in action.
 
 ## Implementation notes
 
