@@ -11,14 +11,24 @@
       "points": 50
     },
     {
-      "name": "Dotnet test",
+      "name": "Unit tests Adder",
       "setup": "",
-      "run": "DOTNET_CLI_HOME=/home/runner dotnet test",
+      "run": "DOTNET_CLI_HOME=/home/runner dotnet test --filter TestGroup=Adder",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 1,
-      "points": 50
+      "points": 25
+    },
+    {
+      "name": "Unit tests HelloWorld",
+      "setup": "",
+      "run": "DOTNET_CLI_HOME=/home/runner dotnet test --filter TestGroup=HelloWorld",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 25
     }
   ]
 }
