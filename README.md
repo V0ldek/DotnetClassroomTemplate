@@ -1,4 +1,4 @@
-# Classroom Template
+# .NET Classroom Template
 
 Template for autograding enabled .NET projects in GitHub Classroom.
 
