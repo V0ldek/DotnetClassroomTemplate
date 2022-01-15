@@ -1,7 +1,7 @@
 {
   "tests": [
     {
-      "name": "Console test",
+      "name": "Console Test (ClassroomTemplate)",
       "setup": "",
       "run": "DOTNET_CLI_HOME=/home/runner dotnet run --project ClassroomTemplate",
       "input": "",
@@ -11,7 +11,7 @@
       "points": 50
     },
     {
-      "name": "Unit tests Adder",
+      "name": "Unit Tests (Adder)",
       "setup": "",
       "run": "DOTNET_CLI_HOME=/home/runner dotnet test --filter TestGroup=Adder",
       "input": "",
@@ -21,7 +21,7 @@
       "points": 25
     },
     {
-      "name": "Unit tests HelloWorld",
+      "name": "Unit Tests (HelloWorld)",
       "setup": "",
       "run": "DOTNET_CLI_HOME=/home/runner dotnet test --filter TestGroup=HelloWorld",
       "input": "",
