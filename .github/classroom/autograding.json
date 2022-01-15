@@ -9,7 +9,7 @@
       "comparison": "exact",
       "timeout": 1,
       "points": 50
-    }.
+    },
     "tests": [
     {
       "name": "Dotnet test",
