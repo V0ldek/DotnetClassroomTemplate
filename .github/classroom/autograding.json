@@ -8,7 +8,19 @@
       "output": "Hello, World!",
       "comparison": "exact",
       "timeout": 1,
-      "points": 100
+      "points": 50
+    }.
+    "tests": [
+    {
+      "name": "Dotnet test",
+      "setup": "",
+      "run": "DOTNET_CLI_HOME=/home/runner dotnet test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 50
     }
+  ]
   ]
 }
