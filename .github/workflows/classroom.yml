@@ -1,4 +1,4 @@
-name: .NET
+name: grader
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Generate autograding.json
-      run: dotnet run --project ./.github/classroom/GenerateAutograding -- -e ClassroomTemplate -p 100 -o ./autograding.json
+      run: dotnet run --project ./.github/classroom/GenerateAutograding -- -e ClassroomTemplate -p 100 -o ./.github/classroom/autograding.json
     - name: Autograding
       uses: education/autograding@v1
